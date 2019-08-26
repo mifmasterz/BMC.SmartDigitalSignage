@@ -1,0 +1,8 @@
+0,C:\jobs\BMC.SmartDigitalSignage\BMC.SmartDigitalSignage\bin\Debug\Gambar\0_2
+1,C:\jobs\BMC.SmartDigitalSignage\BMC.SmartDigitalSignage\bin\Debug\Gambar\4_6
+2,C:\jobs\BMC.SmartDigitalSignage\BMC.SmartDigitalSignage\bin\Debug\Gambar\8_12
+3,C:\jobs\BMC.SmartDigitalSignage\BMC.SmartDigitalSignage\bin\Debug\Gambar\15_20
+4,C:\jobs\BMC.SmartDigitalSignage\BMC.SmartDigitalSignage\bin\Debug\Gambar\25_32
+5,C:\jobs\BMC.SmartDigitalSignage\BMC.SmartDigitalSignage\bin\Debug\Gambar\38_43
+6,C:\jobs\BMC.SmartDigitalSignage\BMC.SmartDigitalSignage\bin\Debug\Gambar\48_53
+7,C:\jobs\BMC.SmartDigitalSignage\BMC.SmartDigitalSignage\bin\Debug\Gambar\60_100
