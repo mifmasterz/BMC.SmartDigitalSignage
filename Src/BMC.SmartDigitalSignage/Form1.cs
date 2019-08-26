@@ -18,6 +18,8 @@ namespace BMC.SmartDigitalSignage
 {
     public partial class Form1 : Form
     {
+        static int DetectorInterval;
+        static int SlideInterval;
         Dictionary<int, int> ImageCounter;
         List<DetectionResult> Datas;
         List<string> ImagePath;
@@ -36,6 +38,10 @@ namespace BMC.SmartDigitalSignage
         {
             try
             {
+                SlideInterval = int.Parse(ConfigurationManager.AppSettings["SlideInterval"]);
+                DetectorInterval = int.Parse(ConfigurationManager.AppSettings["DetectorInterval"]);
+                TimerDetector.Interval = DetectorInterval;
+                SlideTimer.Interval = SlideInterval;
                 if (ImagePath == null) ImagePath = new List<string>();
                 if (ImageCounter == null) ImageCounter = new Dictionary<int, int>();
                 var mapFile = ConfigurationManager.AppSettings["MappingFile"];
