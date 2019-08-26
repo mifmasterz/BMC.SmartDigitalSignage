@@ -102,6 +102,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="License-LGPL.txt" />
+    <Content Include="Mapping.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\haarcascade_eye.xml" />
     <None Include="Resources\haarcascade_frontalface_default.xml" />
     <None Include="Resources\gender.txt" />

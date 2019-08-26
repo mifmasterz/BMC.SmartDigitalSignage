@@ -152,6 +152,7 @@ namespace BMC.SmartDigitalSignage
         private void SlideTimer_Tick(object sender, EventArgs e)
         {
             if (Datas == null || Datas.Count<=0) return;
+            bool IsRandom = true;
             foreach(var item in Datas)
             {
                 var pathStr = ImagePath[item.AgeIndex] + (item.GenderIndex == 0 ? "\\Male" : "\\Female");
@@ -175,7 +176,26 @@ namespace BMC.SmartDigitalSignage
                         }
                     }
                     SlidePicture.Image = Image.FromFile(ImagesList[ImageCounter[item.AgeIndex]]);
+                    IsRandom = false;
+                    break;
                 }
+            }
+            if (IsRandom)
+            {
+                Random rnd = new Random(Environment.TickCount);
+                while (true)
+                {
+                    var RootPath = ImagePath[rnd.Next(0, 7)];
+                    var ImagesList = Directory.GetFiles(RootPath, "*.*", SearchOption.AllDirectories)
+                               .Where(s => s.EndsWith(".png") || s.EndsWith(".bmp") || s.EndsWith(".jpg") || s.EndsWith(".gif")).ToList();
+                    if (ImagesList.Count > 0)
+                    {
+                        var selImage = ImagesList[rnd.Next(0, ImagesList.Count - 1)];
+                        SlidePicture.Image = Image.FromFile(selImage);
+                        break;
+                    }
+                }
+                
             }
         }
     }
